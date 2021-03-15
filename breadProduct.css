@@ -5,6 +5,13 @@ body {
   background-size: cover;
 
 }
+#total{
+  text-align: center;
+  border: 1px solid #f2f2f2;
+}
+#valuebox{
+  text-align: center;
+}
 
  .ratings i {
     font-size: 16px;
@@ -57,6 +64,7 @@ h5 {
     text-align: center;
     margin: 0 auto;
 }
+
 
 
 /* --------------------------------- */

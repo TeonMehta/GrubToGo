@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="breadProduct.css">
   <title>Baguette</title>
   <script src="https://kit.fontawesome.com/e56d36b0a0.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="priceAdjust.js"></script>
 
 </head>
 
@@ -66,6 +68,7 @@
         <div class="container mt-5 mb-5">
             <div class="d-flex justify-content-center row">
                 <div class="col-md-10">
+                  <form>
                     <div class="row p-2 bg-white border rounded">
                         <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
                                 src="baguette.jpg"></div>
@@ -89,7 +92,8 @@
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
-                                <h4 class="mr-1">$3.19</h4><span class="strike-text"></span>
+                                <h4 class="mr-1">$<span name="price" id="price">3.19</span></h4>
+
                             </div>
 
                             <h6 class="text-success">Free shipping</h6>
@@ -102,20 +106,24 @@
                                 <div class="input-group plus-minus-input m-1" >
                                     <div class="row" id="tocenter">
                                     <div class="input-group-button m-1">
-                                        <button type="button" class="btn btn-danger" data-quantity="minus" data-field="quantity">
+                                        <button type="button" class="btn btn-danger" name="subtract" id="subtract" value="-" data-quantity="minus" data-field="quantity">
                                             <i class="fa fa-minus" aria-hidden="true"></i>
                                         </button>
                                     </div>
 
-                                    <input class="input-group-field" id="valuebox" type="number" name="quantity" value="0">
+                                    <input class="input-group-field" id="valuebox" type="text" value="0"></input>
 
                                     <div class="input-group-button m-1">
-                                        <button type="button" class="btn btn-primary" data-quantity="plus" data-field="quantity">
+                                        <button type="button" class="btn btn-primary" name="add" id="add" value="+" data-quantity="plus" data-field="quantity">
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </div>
+
                                     </div>
                                 </div>
+                                <br/>
+                                  <span class="currencyinput">$<input type="text" name="total" id="total" value="0"></input></span>
+
 
                             </div>
 
@@ -124,7 +132,9 @@
 
                           </div>
 
+
                     </div>
+
 
 
 
